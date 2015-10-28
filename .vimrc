@@ -41,10 +41,9 @@ set smarttab
 
 " MAPPINGS
 
-nnoremap <M-LEFT> :tabprev<CR>
-nnoremap <M-RIGHT> :tabnext<CR>
-nnoremap <M-UP> :tabm +1<CR>
-nnoremap <M-DOWN> :tabm -1<CR>
+nnoremap <M-LEFT> :bp<CR>
+nnoremap <M-RIGHT> :bn<CR>
+nnoremap <M-UP> :enew<CR>
+nnoremap <M-DOWN> :ls<CR>
 
-
-
+" Others
