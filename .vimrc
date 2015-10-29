@@ -1,5 +1,8 @@
 " Set color scheme
-colorscheme darkblue
+colorscheme monokai
+
+" Highlight cursor line
+set cursorline
 
 " Syntax hilight
 syntax on
@@ -10,8 +13,8 @@ set nowrap
 " Hilight search
 set hlsearch
 
-" Show current mode
-set showmode
+" Use 256colors
+set t_Co=256
 
 " Autoindent line as one above
 set autoindent
@@ -21,6 +24,9 @@ set smartindent
 
 " Ignore case when searching
 set ignorecase
+
+" Status line always
+set laststatus=2
 
 " Incremental search
 set incsearch
@@ -43,7 +49,21 @@ set smarttab
 
 nnoremap <M-LEFT> :bp<CR>
 nnoremap <M-RIGHT> :bn<CR>
-nnoremap <M-UP> :enew<CR>
-nnoremap <M-DOWN> :ls<CR>
+nnoremap <M-DOWN> :bd<CR>
 
-" Others
+" ---------- Others -----------
+
+" Pathogen
+execute pathogen#infect()
+
+" Airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+
+" Tagbar
+let g:tagbar_autofocus = 1
+let g:tagbar_compact = 1
+
+nnoremap <silent> <F8> :TagbarToggle<CR>
+
+
