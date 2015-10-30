@@ -45,11 +45,12 @@ set tabstop=4
 set expandtab
 set smarttab
 
-" MAPPINGS
+" ---------- MAPPINGS ------------
 
 nnoremap <M-LEFT> :bp<CR>
 nnoremap <M-RIGHT> :bn<CR>
 nnoremap <M-DOWN> :bd<CR>
+nnoremap <M-UP> <C-W>w
 
 " ---------- Others -----------
 
@@ -59,6 +60,7 @@ execute pathogen#infect()
 " Airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
+let g:airline_theme = 'badwolf'
 
 " Tagbar
 let g:tagbar_autofocus = 1
