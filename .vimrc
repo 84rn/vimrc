@@ -45,12 +45,14 @@ set tabstop=4
 set expandtab
 set smarttab
 
+" Tag search
+set tags=./tags;
+
 " ---------- MAPPINGS ------------
 
-nnoremap <M-LEFT> :bp<CR>
-nnoremap <M-RIGHT> :bn<CR>
-nnoremap <M-DOWN> :bd<CR>
-nnoremap <M-UP> <C-W>w
+nnoremap <C-h> :bp<CR>
+nnoremap <C-l> :bn<CR>
+nnoremap <C-k> <C-W>w
 
 " ---------- Others -----------
 
@@ -68,4 +70,6 @@ let g:tagbar_compact = 1
 
 nnoremap <silent> <F8> :TagbarToggle<CR>
 
+" CTRLP
+let g:ctrlp_open_multiple_files = '0r'
 
